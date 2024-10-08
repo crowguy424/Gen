@@ -30,7 +30,7 @@ function gen(){
     
         document.body.style.animeImgEl = "url('" + selectedImage.url + "')";
         animeNameEl.textContent = selectedImage.name;
-        btnEl.innerText = "Marry Her";
+        btnEl.innerText = "Insha Allah I Will Marry Her";
         btnEl.disabled = true;
 
         animeContainerEl.style.display = "block";
