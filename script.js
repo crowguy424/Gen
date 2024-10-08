@@ -19,29 +19,32 @@ btnEl.addEventListener("click", async function(){
 })
 */
 
+function gen(){
+    try{
+    
+    
+        btnEl.disabled = true;
+         btnEl.innerText = "Loading"
+        var randomIndex = Math.floor(Math.random() * images.length);
+        var selectedImage = images[randomIndex];
+    
+        document.body.style.animeImgEl = "url('" + selectedImage.url + "')";
+        animeNameEl.textContent = selectedImage.name;
+        btnEl.innerText = "Marry Her";
+        btnEl.disabled = true;
+
+        animeContainerEl.style.display = "block";
+  
+    
+    }catch(error){
+        console.log(error);
+    }
+}
+
 
 btnEl.addEventListener(
     "click",
-    function(){
-        try{
-        
-        
-            btnEl.disabled = true;
-             btnEl.innerText = "Loading"
-            var randomIndex = Math.floor(Math.random() * images.length);
-            var selectedImage = images[randomIndex];
-        
-            document.body.style.backgroundImage = "url('" + selectedImage.url + "')";
-            animeNameEl.textContent = selectedImage.name;
-            btnEl.disabled = false;
-            btnEl.innerText = "Marry Her";
-            animeContainerEl.style.display = "block";
-      
-        
-        }catch(error){
-            console.log(error);
-        }
-    }
+     gen 
 );
 //init call
 //generate();
